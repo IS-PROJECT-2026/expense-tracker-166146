@@ -4,14 +4,16 @@ A small browser-based expense tracker for recording and reviewing personal expen
 
 ## Project Status
 
-In development.
+The project is being developed as a static web application and will be deployed with GitHub Pages.
 
-## Planned Features
+## Features
 
-- Add, edit, and delete expenses
+- Add expenses with a description, amount, date, and category
+- Edit and delete saved expenses
 - Filter expenses by category
-- View spending totals
-- Save expenses in the browser
+- View total spending and category totals
+- Persist expenses with browser `localStorage`
+- Use the application on desktop and mobile screens
 
 ## Technologies
 
@@ -21,4 +23,4 @@ In development.
 
 ## Live Demo
 
-Coming soon.
+The live GitHub Pages link will be added after deployment.
