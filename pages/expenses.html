@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track an Expense | Expense Tracker</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="../index.html">Expense Tracker</a>
+      <a href="expenses.html">Track an expense</a>
+    </nav>
+
+    <main class="form-page">
+      <dialog class="card" open aria-labelledby="form-title">
+        <h1 id="form-title">Add an expense</h1>
+        <p class="section-copy">Keep the details short and accurate.</p>
+
+        <form>
+          <div class="field-group">
+            <label for="description">Description</label>
+            <input id="description" name="description" type="text" required />
+          </div>
+
+          <div class="form-row">
+            <div class="field-group">
+              <label for="amount">Amount</label>
+              <input id="amount" name="amount" type="number" min="0.01" step="0.01" required />
+            </div>
+
+            <div class="field-group">
+              <label for="date">Date</label>
+              <input id="date" name="date" type="date" required />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+              <option value="">Choose a category</option>
+              <option value="food">Food</option>
+              <option value="transport">Transport</option>
+              <option value="bills">Bills</option>
+              <option value="shopping">Shopping</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <button class="button" type="submit">Save expense</button>
+        </form>
+      </dialog>
+    </main>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
