@@ -13,11 +13,11 @@
     </nav>
 
     <main class="form-page">
-      <dialog class="card" open aria-labelledby="form-title">
+      <dialog class="card" id="expense-dialog" aria-labelledby="form-title">
         <h1 id="form-title">Add an expense</h1>
         <p class="section-copy">Keep the details short and accurate.</p>
 
-        <form>
+        <form id="expense-form">
           <div class="field-group">
             <label for="description">Description</label>
             <input id="description" name="description" type="text" required />
@@ -48,8 +48,34 @@
           </div>
 
           <button class="button" type="submit">Save expense</button>
+          <button class="button button-secondary" id="cancel-edit" type="button" hidden>Cancel edit</button>
         </form>
       </dialog>
+
+      <section class="expense-list" aria-labelledby="list-title">
+        <div class="list-heading">
+          <div>
+            <p class="eyebrow">Your activity</p>
+            <h2 id="list-title">Saved expenses</h2>
+          </div>
+          <button class="button add-button" id="open-form" type="button">Add expense</button>
+        </div>
+        <p id="empty-state" class="section-copy">No expenses saved yet.</p>
+        <div class="table-wrap">
+          <table id="expense-table" hidden>
+            <thead>
+              <tr>
+                <th scope="col">Description</th>
+                <th scope="col">Category</th>
+                <th scope="col">Date</th>
+                <th scope="col">Amount</th>
+                <th scope="col"><span class="sr-only">Actions</span></th>
+              </tr>
+            </thead>
+            <tbody id="expense-items"></tbody>
+          </table>
+        </div>
+      </section>
     </main>
     <script src="../js/app.js"></script>
   </body>
