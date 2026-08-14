@@ -1,6 +1,6 @@
 # Expense Tracker 
 
-A simple browser-based tool for recording and reviewing personal spending.
+A lightweight browser application for managing personal expenses and spending habits.
 
 ## Project Status
 
