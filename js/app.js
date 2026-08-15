@@ -8,6 +8,10 @@ if (form) {
   const list = document.querySelector("#expense-items");
   const table = document.querySelector("#expense-table");
   const emptyState = document.querySelector("#empty-state");
+  const categoryFilter = document.querySelector("#category-filter");
+  const totalSpending = document.querySelector("#total-spending");
+  const categoryCount = document.querySelector("#category-count");
+  const categorySummary = document.querySelector("#category-summary");
   const formTitle = document.querySelector("#form-title");
   const saveButton = form.querySelector("[type=submit]");
   const cancelEdit = document.querySelector("#cancel-edit");
@@ -35,7 +39,12 @@ if (form) {
   })[character]);
 
   const renderExpenses = () => {
-    list.innerHTML = expenses.map((expense) => `
+    const selectedCategory = categoryFilter.value;
+    const visibleExpenses = selectedCategory === "all"
+      ? expenses
+      : expenses.filter((expense) => expense.category === selectedCategory);
+
+    list.innerHTML = visibleExpenses.map((expense) => `
       <tr>
         <th scope="row">${escapeHtml(expense.description)}</th>
         <td>${escapeHtml(expense.category)}</td>
@@ -47,8 +56,24 @@ if (form) {
         </td>
       </tr>
     `).join("");
-    emptyState.hidden = expenses.length > 0;
-    table.hidden = expenses.length === 0;
+
+    const total = expenses.reduce((sum, expense) => sum + Number(expense.amount), 0);
+    const categories = [...new Set(expenses.map((expense) => expense.category))];
+    const totalsByCategory = expenses.reduce((totals, expense) => {
+      totals[expense.category] = (totals[expense.category] || 0) + Number(expense.amount);
+      return totals;
+    }, {});
+
+    totalSpending.textContent = total.toFixed(2);
+    categoryCount.textContent = categories.length;
+    categorySummary.innerHTML = categories.map((category) =>
+      `<span>${escapeHtml(category)}: <strong>${totalsByCategory[category].toFixed(2)}</strong></span>`
+    ).join("");
+    emptyState.textContent = expenses.length === 0
+      ? "No expenses saved yet."
+      : "No expenses match this category.";
+    emptyState.hidden = visibleExpenses.length > 0;
+    table.hidden = visibleExpenses.length === 0;
   };
 
   const resetEditor = () => {
@@ -107,6 +132,8 @@ if (form) {
     resetEditor();
     dialog.close();
   });
+
+  categoryFilter.addEventListener("change", renderExpenses);
 
   list.addEventListener("click", (event) => {
     const button = event.target.closest("button[data-action]");
