@@ -5,3 +5,4 @@
 - The `main` branch is protected from direct development commits.
 - The GitHub Project board uses `To Do`, `In Progress`, and `Done`.
 - Issues move to `Done` after their pull request is merged and verified.
+- Completed issues are moved to Done after verification.
