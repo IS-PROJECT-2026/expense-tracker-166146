@@ -60,6 +60,28 @@
           </div>
           <button class="button add-button" id="open-form" type="button">Add expense</button>
         </div>
+        <div class="summary-grid" aria-label="Spending summary">
+          <div class="summary-card">
+            <span>Total spending</span>
+            <strong id="total-spending">0.00</strong>
+          </div>
+          <div class="summary-card">
+            <span>Categories</span>
+            <strong id="category-count">0</strong>
+          </div>
+        </div>
+
+        <label class="filter-label" for="category-filter">Filter by category</label>
+        <select id="category-filter">
+          <option value="all">All categories</option>
+          <option value="food">Food</option>
+          <option value="transport">Transport</option>
+          <option value="bills">Bills</option>
+          <option value="shopping">Shopping</option>
+          <option value="other">Other</option>
+        </select>
+
+        <div id="category-summary" class="category-summary" aria-live="polite"></div>
         <p id="empty-state" class="section-copy">No expenses saved yet.</p>
         <div class="table-wrap">
           <table id="expense-table" hidden>
