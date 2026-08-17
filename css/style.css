@@ -127,6 +127,9 @@ h2 {
 
 dialog.card {
   border: 0;
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
   margin: auto;
 }
 
@@ -320,6 +323,7 @@ label {
 
 input,
 select {
+  min-width: 0;
   width: 100%;
   border: 1px solid #ccd5e5;
   border-radius: 0.5rem;
@@ -334,32 +338,4 @@ select:focus,
 .button:focus-visible {
   outline: 3px solid rgb(70 102 213 / 30%);
   outline-offset: 2px;
-}
-
-@media (max-width: 600px) {
-  .hero {
-    min-height: 65vh;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .summary-grid {
-    grid-template-columns: 1fr;
-  }
-
-  th,
-  td {
-    padding: 0.75rem;
-  }
-
-  .form-page {
-    padding-top: 1rem;
-  }
-
-  .list-heading {
-    align-items: start;
-    flex-direction: column;
-  }
 }

@@ -13,7 +13,7 @@ The project is being developed as a static web application and will be deployed 
 - Filter expenses by category
 - View total spending and category totals
 - Persist expenses with browser `localStorage`
-- Use the application on desktop and mobile screens
+- Use the application in modern browsers
 
 ## Technologies
 
@@ -23,4 +23,4 @@ The project is being developed as a static web application and will be deployed 
 
 ## Live Demo
 
-The live GitHub Pages link will be added after deployment.
+[Open the Expense Tracker](https://is-project-2026.github.io/expense-tracker-166146/)
