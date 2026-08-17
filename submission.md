@@ -59,29 +59,29 @@ Demonstrate your workflow mechanics by embedding your screenshots below.
 ### A. Milestones and Issues
 *Provide a screenshot showing your active milestone(s) and the granular tracking issues linked directly to them.*
 
-
-[PASTE YOUR MILESTONE SCREENSHOT DIRECTLY HERE]
+<img width="1356" height="654" alt="image" src="https://github.com/user-attachments/assets/f9ff0e7c-fd91-458b-b637-f003b1db56d0" />
 
 * **Caption:** The repository is organized into three milestones—Project Foundation, Expense Tracking Features, and Delivery, Evidence, and Assessment—with granular issues assigned to each milestone. 
 
 ### B. Project Board
 *Provide a screenshot of your GitHub Project Board with your issues organized dynamically across columns (To Do, In Progress, Done).*
 
-[PASTE YOUR PROJECT BOARD SCREENSHOT DIRECTLY HERE]
+<img width="1356" height="654" alt="image" src="https://github.com/user-attachments/assets/026e4b14-c7fc-4f4a-a487-d1c188719948" />
+
 
 * **Caption:** The project board shows realistic workflow movement, with Issues #4–#6 in progress, Issues #7–#9 awaiting work, and completed pull requests #10–#12 recorded in Done. 
 
 ### C. Branching Architecture
 *Provide a screenshot showing your local or remote Git branch list, highlighting your use of conventional, issue-linked naming patterns (e.g., `feat/`, `fix/`, `style/`).*
 
-[PASTE YOUR BRANCHING SCREENSHOT DIRECTLY HERE]
+<img width="737" height="585" alt="image" src="https://github.com/user-attachments/assets/5c92f39f-28c4-4d38-bd65-40058602ed0b" />
 
 * **Caption:** The branch list demonstrates issue-linked development using lowercase kebab-case names and category prefixes such as `feat/`, `docs/`, `chore/`, `test/`, and `conflict/`, with both local and remote branches preserved for project history. 
 
 ### D. Pull Requests & Traceability
 *Provide a screenshot of a completed or open Pull Request (PR) on GitHub that clearly shows it is linked to a related development issue.*
 
-[PASTE YOUR PULL REQUEST SCREENSHOT DIRECTLY HERE]
+<img width="1360" height="748" alt="image" src="https://github.com/user-attachments/assets/2b55d7c8-597b-41ec-8e66-cb097e966dae" />
 
 * **Caption:** Pull Request #10 links the `feat/1-project-structure` branch to `main` and closes Issue #1 while showing the project foundation changes for review.
 
@@ -102,21 +102,21 @@ You must engineer **three merge conflicts**, each triggered by a **different cau
 #### Step 1: Generating the Clash
 *Screenshot showing the merge attempt and the conflict warning.*
 
-[PASTE SCREENSHOT OF ATTEMPTED MERGE / TERMINAL WARNING HERE]
+<img width="911" height="419" alt="image" src="https://github.com/user-attachments/assets/ade02a73-6074-441f-a66a-73d10741cbff" />
 
 * **Caption:** Branches `conflict/1-readme-a` and `conflict/1-readme-b` collided when Branch B was merged into Branch A. Git reported a content conflict in `README.md` because both branches edited the same line. 
 
 #### Step 2: Inside the Code Editor (Conflict Markers)
 *Screenshot showing the raw, unresolved conflict markers (`<<<<<<< HEAD`, `=======`, `>>>>>>>`) in your editor.*
 
-[PASTE SCREENSHOT OF RAW CONFLICT MARKERS HERE]
+<img width="728" height="421" alt="image" src="https://github.com/user-attachments/assets/becef19c-8f9c-4132-a1d9-a744df02cfbf" />
 
 * **Caption:** Git inserted conflict markers because both branches changed the exact same README line. I reviewed the current change from `conflict/1-readme-a` and the incoming change from `conflict/1-readme-b`, then selected a single clearer description for the project. 
 
 #### Step 3: Resolution & Clean Merge
 *Screenshot of your clean Git history or completed PR showing the conflict was resolved and merged.*
 
-[PASTE SCREENSHOT OF CLEAN RESOLUTION HERE]
+<img width="727" height="517" alt="image" src="https://github.com/user-attachments/assets/d6d7d37c-2e4a-4960-a3af-0220e4d3eea6" />
 
 * **Caption:** The README conflict was resolved by removing all conflict markers and keeping only the incoming project description. Git recorded the completed merge resolution, and the working tree is clean. 
 
@@ -128,7 +128,7 @@ You must engineer **three merge conflicts**, each triggered by a **different cau
 
 **Why does this cause trigger a conflict?** Both branches started from the same version of `docs/workflow.md` and independently added different items at the very bottom of the file. Because both additions targeted the same final position, Git could not automatically determine how to combine them and inserted conflict markers.
 
-[PASTE SCREENSHOT OF CONFLICT MARKERS FOR CONFLICT 2 HERE]
+<img width="730" height="441" alt="image" src="https://github.com/user-attachments/assets/4b686bfd-fb7f-49d4-8dfe-63c779e2064d" />
 
 * **Caption:** Branches `conflict/2-appended-list-a` and `conflict/2-appended-list-b` independently appended different workflow items to the bottom of `docs/workflow.md`, creating an overlapping appended-list conflict. 
 
@@ -140,7 +140,7 @@ You must engineer **three merge conflicts**, each triggered by a **different cau
 
 **Why does this cause trigger a conflict?** Both branches renamed the same original file, `docs/verification.md`, to different destination paths. Git could not determine which renamed path should be retained, so it stopped the merge with a rename/rename conflict. 
 
-[PASTE SCREENSHOT OF CONFLICT MARKERS FOR CONFLICT 3 HERE]
+<img width="737" height="585" alt="image" src="https://github.com/user-attachments/assets/5ac050e7-d277-4a6f-82da-42b85688a2e7" />
 
 * **Caption:** Branch `conflict/3-file-rename-a` renamed `docs/verification.md` to `docs/deployment-verification.md`, while `conflict/3-file-rename-b` renamed it to `docs/profile-verification.md`. Git reported a rename/rename conflict because both branches assigned different final paths to the same file. 
 
