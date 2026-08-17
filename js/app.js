@@ -39,10 +39,9 @@ if (form) {
   })[character]);
 
   const renderExpenses = () => {
-    const selectedCategory = categoryFilter.value;
-    const visibleExpenses = selectedCategory === "all"
+    const visibleExpenses = categoryFilter.value === "all"
       ? expenses
-      : expenses.filter((expense) => expense.category === selectedCategory);
+      : expenses.filter((expense) => expense.category === categoryFilter.value);
 
     list.innerHTML = visibleExpenses.map((expense) => `
       <tr>
