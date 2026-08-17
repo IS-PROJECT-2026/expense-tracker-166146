@@ -4,7 +4,7 @@ A lightweight browser application for managing personal expenses and spending ha
 
 ## Project Status
 
-The project is being developed as a static web application and will be deployed with GitHub Pages.
+A completed static web application deployed through GitHub Pages.
 
 ## Features
 
@@ -12,6 +12,8 @@ The project is being developed as a static web application and will be deployed 
 - Edit and delete saved expenses
 - Filter expenses by category
 - View total spending and category totals
+- Validate required fields, positive amounts, and non-future dates
+- Show useful empty and no-match states
 - Persist expenses with browser `localStorage`
 - Use the application in modern browsers
 
